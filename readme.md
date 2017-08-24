@@ -18,6 +18,7 @@ $ yarn add vue-dropdowns
 ```html
 <dropdown :options="arrayOfObjects" :selected="object" v-on:updateOption="methodToRunOnSelect"></dropdown>
 
+<script>
 export default {
         data() {
           return {
@@ -34,6 +35,7 @@ export default {
           }
         }
       }
+</script>
 
 ```
 
