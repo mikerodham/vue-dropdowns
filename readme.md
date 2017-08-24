@@ -30,7 +30,7 @@ export default {
         },
 
         methods: {
-          methodToRunOnOptionUpdate(payload) {
+          methodToRunOnSelect(payload) {
             this.object = payload;
           }
         }
