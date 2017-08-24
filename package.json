@@ -1,0 +1,21 @@
+{
+  "name": "vue-dropdown",
+  "version": "0.7",
+  "description": "A prettier dropdown for Vue2 to replace select boxes",
+  "main": "dropdown.vue",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mikerodham/vue-dropdown.git"
+  },
+  "keywords": [
+    "vue",
+    "dropdown",
+    "vue-dropdown"
+  ],
+  "author": "Mike Rodham",
+  "license": "MIT"
+}
