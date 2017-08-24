@@ -1,4 +1,4 @@
-# vue-dropdown
+# vue-dropdowns
 A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects.
 
 # Requirements
@@ -38,6 +38,10 @@ export default {
 </script>
 
 ```
+
+# Todo
+- Add different styles to choose from
+- Add option to include own styling via json object
 
 # License
 
