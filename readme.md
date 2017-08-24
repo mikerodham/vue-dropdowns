@@ -19,6 +19,8 @@ $ yarn add vue-dropdowns
 <dropdown :options="arrayOfObjects" :selected="object" v-on:updateOption="methodToRunOnSelect"></dropdown>
 
 <script>
+import dropdown from 'vue-dropdowns';
+
 export default {
         data() {
           return {
@@ -27,6 +29,10 @@ export default {
               name: 'Object Name',
             }
           }
+        },
+
+        components: {
+            'dropdown': dropdown,
         },
 
         methods: {
