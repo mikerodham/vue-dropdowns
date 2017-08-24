@@ -7,7 +7,11 @@ A prettier way to display select boxes.
 
 # Installation
 
-- To yet be uploaded to NPM
+```shell
+$ npm install vue-dropdowns
+// OR
+$ yarn add vue-dropdowns
+```
 
 # License
 
