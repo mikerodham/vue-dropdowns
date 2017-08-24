@@ -1,5 +1,5 @@
 # vue-dropdown
-A prettier way to display select boxes.
+A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects.
 
 # Requirements
 
@@ -11,6 +11,30 @@ A prettier way to display select boxes.
 $ npm install vue-dropdowns
 // OR
 $ yarn add vue-dropdowns
+```
+
+# Usage
+
+```html
+<dropdown :options="arrayOfObjects" :selected="object" v-on:updateOption="methodToRunOnSelect"></dropdown>
+
+export default {
+        data() {
+          return {
+            arrayOfObjects: [],
+            object: {
+              name: 'Object Name',
+            }
+          }
+        },
+
+        methods: {
+          methodToRunOnOptionUpdate(payload) {
+            this.object = payload;
+          }
+        }
+      }
+
 ```
 
 # License
