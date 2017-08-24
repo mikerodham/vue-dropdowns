@@ -3,7 +3,7 @@ A prettier way to display select boxes if you're selecting objects if you're usi
 
 # Requirements
 
-- [Vue.js](https://github.com/yyx990803/vue) `^2.0.0`
+- [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
 
 # Installation
 
