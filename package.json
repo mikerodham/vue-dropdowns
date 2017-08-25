@@ -1,6 +1,6 @@
 {
   "name": "vue-dropdowns",
-  "version": "0.7.1",
+  "version": "1.0.0",
   "description": "A prettier dropdown for Vue2 to replace select boxes",
   "main": "dropdown.vue",
   "scripts": {
@@ -14,7 +14,8 @@
   "keywords": [
     "vue",
     "dropdown",
-    "vue-dropdown"
+    "vue-dropdown",
+    "vue-dropdowns",
   ],
   "author": "Mike Rodham",
   "license": "MIT"
