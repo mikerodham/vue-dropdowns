@@ -1,6 +1,9 @@
 # vue-dropdowns
 A prettier way to display select boxes if you're selecting objects if you're using a v-for on objects.
 
+# Demo
+ - [Demo - https://mikerodham.github.io/vue-dropdowns/](https://mikerodham.github.io/vue-dropdowns/)
+
 # Requirements
 
 - [Vue.js](https://github.com/vuejs/vue) `^2.0.0`
