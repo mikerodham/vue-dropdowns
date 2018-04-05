@@ -10,7 +10,7 @@
           <span class="caret"></span>
         </li>
 
-        <ul class="dropdown-menu" :class="{ 'hide' : !showMenu}">
+        <ul class="dropdown-menu" v-if="showMenu">
             <li v-for="option in options">
                 <a href="javascript:void(0)" @click="updateOption(option)">
                     {{ option.name }}
@@ -93,10 +93,6 @@
           background: #e1e1e1;
           cursor: pointer;
         }
-    }
-
-    .hide {
-      display: none;
     }
 
     .dropdown-menu {
