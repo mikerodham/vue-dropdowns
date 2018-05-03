@@ -6,7 +6,7 @@
         </li>
 
         <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name === undefined">
-          Please select an item
+          {{placeholderText}}
           <span class="caret"></span>
         </li>
 
@@ -28,6 +28,7 @@
                   name: '',
                 },
                 showMenu: false,
+                placeholderText: 'Please select an item',
             }
         },
         props: {
@@ -35,10 +36,15 @@
                 type: [Array, Object]
             },
             selected: {},
+            placeholder: [String]
         },
 
         mounted() {
             this.selectedOption = this.selected;
+            if (this.placeholder)
+            {
+                this.placeholderText = this.placeholder;
+            }
         },
 
         methods: {
