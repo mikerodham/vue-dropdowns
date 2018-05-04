@@ -1,6 +1,6 @@
 {
   "name": "vue-dropdowns",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A prettier dropdown for Vue2 to replace select boxes",
   "main": "dropdown.vue",
   "scripts": {
