@@ -1,7 +1,7 @@
 {
   "name": "vue-dropdowns",
-  "version": "1.0.4",
-  "description": "A prettier dropdown for Vue2 to replace select boxes",
+  "version": "1.0.5",
+  "description": "An easier way to display select boxes using objects",
   "main": "dropdown.vue",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

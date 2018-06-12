@@ -50,10 +50,6 @@ export default {
 
 ```
 
-# Todo
-- Add different styles to choose from
-- Add option to include own styling via json object
-
 # License
 
 [The MIT License](http://opensource.org/licenses/MIT)
