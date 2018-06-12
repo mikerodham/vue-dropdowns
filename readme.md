@@ -21,7 +21,11 @@ $ yarn add vue-dropdowns
 # Usage
 
 ```html
-<dropdown :options="arrayOfObjects" :selected="object" v-on:updateOption="methodToRunOnSelect"></dropdown>
+<dropdown :options="arrayOfObjects" 
+          :selected="object" 
+          v-on:updateOption="methodToRunOnSelect" 
+          :placeholder="'Select an Item'">
+</dropdown>
 
 <script>
 import dropdown from 'vue-dropdowns';
