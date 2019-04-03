@@ -21,9 +21,9 @@ $ yarn add vue-dropdowns
 # Usage
 
 ```html
-<dropdown :options="arrayOfObjects" 
-          :selected="object" 
-          v-on:updateOption="methodToRunOnSelect" 
+<dropdown :options="arrayOfObjects"
+          :selected="object"
+          v-on:updateOption="methodToRunOnSelect"
           :placeholder="'Select an Item'">
 </dropdown>
 
@@ -36,6 +36,8 @@ export default {
             arrayOfObjects: [],
             object: {
               name: 'Object Name',
+              // If you want to add text, Please describe here
+              add: 'Add Text'
             }
           }
         },

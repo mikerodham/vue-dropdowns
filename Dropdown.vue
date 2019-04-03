@@ -26,6 +26,7 @@
             return {
                 selectedOption: {
                   name: '',
+                  add: false
                 },
                 showMenu: false,
                 placeholderText: 'Please select an item',
@@ -50,6 +51,9 @@
         methods: {
             updateOption(option) {
                 this.selectedOption = option;
+                if (this.selectedOption.add) {
+                    this.selectedOption.name = this.selectedOption.name + this.selectedOption.add
+                }
                 this.showMenu = false;
                 this.$emit('updateOption', this.selectedOption);
             },
