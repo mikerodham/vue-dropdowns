@@ -1,6 +1,6 @@
 yar<template>
   <div id="app">
-    <img src="/vue-dropdowns/dist/logo.png">
+    <img src="https://vuejs.org/images/logo.png">
     <h1>vue-dropdowns</h1>
     <a href="https://github.com/mikerodham/vue-dropdowns">https://github.com/mikerodham/vue-dropdowns</a>
     <p>A prettier way to display select boxes</p>
