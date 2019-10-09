@@ -24,7 +24,8 @@ $ yarn add vue-dropdowns
 <dropdown :options="arrayOfObjects" 
           :selected="object" 
           v-on:updateOption="methodToRunOnSelect" 
-          :placeholder="'Select an Item'">
+          :placeholder="'Select an Item'"
+          :closeOnOutsideClick="boolean">
 </dropdown>
 
 <script>
@@ -53,6 +54,11 @@ export default {
 </script>
 
 ```
+
+# Default values of props
+| Property             | Type          | Default value  |
+| -------------------- |:-------------:| --------------:|
+| closeOnOutsideClick  | boolean       | true           |
 
 # License
 
