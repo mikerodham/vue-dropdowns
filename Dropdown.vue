@@ -36,7 +36,11 @@
                 type: [Array, Object]
             },
             selected: {},
-            placeholder: [String]
+            placeholder: [String],
+            closeOnOutsideClick: {
+              type: [Boolean],
+              default: true,
+            },
         },
 
         mounted() {
@@ -45,6 +49,14 @@
             {
                 this.placeholderText = this.placeholder;
             }
+
+            if (this.closeOnOutsideClick) {
+              document.addEventListener('click', this.clickHandler);
+            }
+        },
+
+        beforeDestroy() {
+            document.removeEventListener('click', this.clickHandler);
         },
 
         methods: {
@@ -56,7 +68,16 @@
 
             toggleMenu() {
               this.showMenu = !this.showMenu;
-            }
+            },
+
+            clickHandler(event) {
+                const { target } = event;
+                const { $el } = this;
+
+                if (!$el.contains(target)) {
+                  this.showMenu = false;
+                }
+            },
         }
     }
 </script>
