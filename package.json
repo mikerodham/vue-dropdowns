@@ -1,6 +1,6 @@
 {
   "name": "vue-dropdowns",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "An easier way to display select boxes using objects",
   "main": "Dropdown.vue",
   "scripts": {
