@@ -99,7 +99,7 @@
 .dropdown-toggle {
   color: #636b6f;
   min-width: 160px;
-  padding: 10px;
+  padding: 10px 20px 10px 10px;
   text-transform: none;
   font-weight: 300;
   margin-bottom: 7px;
@@ -113,6 +113,9 @@
   float: none;
   box-shadow: none;
   border-radius: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .dropdown-toggle:hover {
   background: #e1e1e1;
@@ -161,18 +164,17 @@
 }
 
 .caret {
-  display: relative;
   width: 0;
-  position: relative;
-  top: 10px;
+  position: absolute;
+  top: 19px;
   height: 0;
-  margin-left: 2px;
+  margin-left: -24px;
   vertical-align: middle;
   border-top: 4px dashed;
   border-top: 4px solid \9;
   border-right: 4px solid transparent;
   border-left: 4px solid transparent;
-  float: right;
+  right: 10px;
 }
 
 li {
