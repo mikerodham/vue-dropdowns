@@ -11,7 +11,7 @@
         </li>
 
         <ul class="dropdown-menu" v-if="showMenu">
-            <li v-for="option in options">
+            <li v-for="(option, idx) in options" :key="idx">
                 <a href="javascript:void(0)" @click="updateOption(option)">
                     {{ option.name }}
                 </a>
