@@ -56,13 +56,34 @@ describe('Dropdown.vue', () => {
     await wrapper.vm.$nextTick();
 
     const optionItems = wrapper.findAll('.dropdown-menu li');
-    let allItemsRendered = true;
-    optionItems.wrappers.forEach((item, index) => {
-      if(item.text() !== options[index].name) {
-        allItemsRendered = false;
-      }
+    let allItemsRendered = optionItems.wrappers.every((item, index) => {
+      return item.text() === options[index].name;
     });
 
     expect(allItemsRendered).toBe(true);
+  });
+
+  it('fires updateOption event on click event item', async () => {
+    const updateOptionHandler = jest.fn();
+
+    const wrapper = mount(VueDropdown, {
+      propsData: {
+        options,
+        selected: selectedOption,
+      },
+      listeners: {
+        updateOption: updateOptionHandler,
+      }
+    });
+    const dropdownToggle = wrapper.find('.dropdown-toggle');
+    dropdownToggle.trigger('click');
+
+    await wrapper.vm.$nextTick();
+
+    const optionItems = wrapper.findAll('.dropdown-menu li a');
+    const secondItem = optionItems.at(1);
+    secondItem.trigger('click');
+
+    expect(updateOptionHandler.mock.calls.length).toBe(1);
   });
 });
