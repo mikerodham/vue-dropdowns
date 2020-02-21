@@ -64,7 +64,7 @@ export default {
 
 # Contributing
 
-Please see [Readme of development environment](./dev/readme) 
+Please see [Readme of development environment](./dev/) 
 
 # License
 
