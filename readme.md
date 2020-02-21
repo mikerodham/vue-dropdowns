@@ -61,6 +61,11 @@ export default {
 | closeOnOutsideClick  | boolean       | true            |
 | placeholder          | string        | 'Select an Item' |
 
+
+# Contributing
+
+Please see [Readme of development environment](./dev/readme) 
+
 # License
 
 [The MIT License](http://opensource.org/licenses/MIT)
