@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import VueDropdown from '../../../Dropdown.vue';
-import {options, selectedOption} from '../contants';
+import { options, selectedOption } from '../contants';
 
 describe('Dropdown.vue render', () => {
   it('renders dropdown-toggle', () => {
@@ -43,9 +43,9 @@ describe('Dropdown.vue render', () => {
     await wrapper.vm.$nextTick();
 
     const optionItems = wrapper.findAll('.dropdown-menu li');
-    let allItemsRendered = optionItems.wrappers.every((item, index) => {
-      return item.text() === options[index].name;
-    });
+    const allItemsRendered = optionItems
+      .wrappers
+      .every((item, index) => item.text() === options[index].name);
 
     expect(allItemsRendered).toBe(true);
   });

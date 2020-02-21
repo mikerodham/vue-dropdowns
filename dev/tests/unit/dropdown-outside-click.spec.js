@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import VueDropdown from '../../../Dropdown.vue';
-import {options, selectedOption} from '../contants';
+import { options, selectedOption } from '../contants';
 
 describe('Dropdown.vue outside click', () => {
   it('closes dropdown-menu on outside click by default', async () => {

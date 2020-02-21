@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils';
 import VueDropdown from '../../../Dropdown.vue';
-import {options, selectedOption} from '../contants';
+import { options, selectedOption } from '../contants';
 
 describe('Dropdown.vue select item', () => {
   it('fires updateOption event on click event item', async () => {
@@ -13,7 +13,7 @@ describe('Dropdown.vue select item', () => {
       },
       listeners: {
         updateOption: updateOptionHandler,
-      }
+      },
     });
     const dropdownToggle = wrapper.find('.dropdown-toggle');
     dropdownToggle.trigger('click');
