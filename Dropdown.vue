@@ -5,7 +5,7 @@
           <span class="caret"></span>
         </li>
 
-        <li @click="toggleMenu()" class="dropdown-toggle placeholder" v-if="selectedOption.name === undefined">
+        <li @click="toggleMenu()" class="dropdown-toggle dropdown-toggle-placeholder" v-if="selectedOption.name === undefined">
           {{placeholderText}}
           <span class="caret"></span>
         </li>
