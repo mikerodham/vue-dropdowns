@@ -73,10 +73,11 @@ export default {
 ```
 
 # Default values of props
-| Property             | Type          | Default value   |
-| -------------------- |:-------------:| ---------------:|
-| closeOnOutsideClick  | boolean       | true            |
-| placeholder          | string        | 'Select an Item' |
+| Property            |  Type   |    Default value |
+|---------------------|:-------:|-----------------:|
+| closeOnOutsideClick | boolean |             true |
+| placeholder         | string  | 'Select an Item' |
+| disabled            | boolean |            false |
 
 # License
 
