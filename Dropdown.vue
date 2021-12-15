@@ -1,13 +1,15 @@
 <template>
-    <div class="btn-group">
-        <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined">
-          {{ selectedOption.name }}
-          <span class="caret"></span>
+    <div class="btn-group" :class="{'disabled': $attrs.disabled}">
+        <li @click="toggleMenu()" class="dropdown-toggle" v-if="selectedOption.name !== undefined"
+            :class="{'disabled': $attrs.disabled}">
+            {{ selectedOption.name }}
+            <span class="caret"></span>
         </li>
 
-        <li @click="toggleMenu()" class="dropdown-toggle dropdown-toggle-placeholder" v-if="selectedOption.name === undefined">
-          {{placeholderText}}
-          <span class="caret"></span>
+        <li @click="toggleMenu()" class="dropdown-toggle dropdown-toggle-placeholder"
+            v-if="selectedOption.name === undefined" :class="{'disabled': $attrs.disabled}">
+            {{ placeholderText }}
+            <span class="caret"></span>
         </li>
 
         <ul class="dropdown-menu" v-if="showMenu">
@@ -66,9 +68,11 @@
                 this.$emit('updateOption', this.selectedOption);
             },
 
-            toggleMenu() {
-              this.showMenu = !this.showMenu;
-            },
+        toggleMenu() {
+            if ( !this.$attrs.disabled ) {
+                this.showMenu = !this.showMenu;
+            }
+        },
 
             clickHandler(event) {
                 const { target } = event;
@@ -93,7 +97,7 @@
   vertical-align: middle;
 }
 .btn-group a:hover {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 .dropdown-toggle {
@@ -142,42 +146,48 @@
 }
 
 .dropdown-menu > li > a {
-  padding: 10px 30px;
-  display: block;
-  clear: both;
-  font-weight: normal;
-  line-height: 1.6;
-  color: #333333;
-  white-space: nowrap;
-  text-decoration: none;
+    padding: 10px 30px;
+    display: block;
+    clear: both;
+    font-weight: normal;
+    line-height: 1.6;
+    color: #333333;
+    white-space: nowrap;
+    text-decoration: none;
 }
+
 .dropdown-menu > li > a:hover {
-  background: #efefef;
-  color: #409FCB;
+    background: #efefef;
+    color: #409FCB;
 }
 
 .dropdown-menu > li {
-  overflow: hidden;
-  width: 100%;
-  position: relative;
-  margin: 0;
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+    margin: 0;
 }
 
 .caret {
-  width: 0;
-  position: absolute;
-  top: 19px;
-  height: 0;
-  margin-left: -24px;
-  vertical-align: middle;
-  border-top: 4px dashed;
-  border-top: 4px solid \9;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-  right: 10px;
+    width: 0;
+    position: absolute;
+    top: 19px;
+    height: 0;
+    margin-left: -24px;
+    vertical-align: middle;
+    border-top: 4px dashed;
+    border-top: 4px solid \9;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+    right: 10px;
 }
 
 li {
     list-style: none;
+}
+
+.disabled {
+    opacity: .5;
+    cursor: not-allowed !important;
 }
 </style>
